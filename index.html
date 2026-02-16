@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Video</title>
 
+<!-- ICONOS (Font Awesome) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
 body{
     margin:0;
@@ -24,28 +27,58 @@ video{
     position:fixed;
     top:20px;
     left:20px;
-    width:6px;               /* grosor */
+    width:60px;
     height:0;
     background:#FF3131;
-    border-radius:20px;
+    border-radius:30px;
     z-index:10;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding-top:20px;
+    gap:25px;
+    overflow:hidden;
     animation:desplegar 1.2s ease-out forwards;
 }
 
-/* ANIMACION */
+/* ICONOS */
+.icono{
+    color:#fff;
+    font-size:22px;
+    opacity:0;
+    transform:translateY(-20px);
+    animation:aparecer 0.6s ease forwards;
+}
+
+/* RETARDOS PARA QUE APAREZCAN UNO A UNO */
+.icono:nth-child(1){ animation-delay:1.2s; }
+.icono:nth-child(2){ animation-delay:1.4s; }
+.icono:nth-child(3){ animation-delay:1.6s; }
+.icono:nth-child(4){ animation-delay:1.8s; }
+
+/* ANIMACION BARRA */
 @keyframes desplegar{
-    from{
-        height:0;
-    }
+    from{ height:0; }
+    to{ height:45vh; } /* menos de la mitad */
+}
+
+/* ANIMACION ICONOS */
+@keyframes aparecer{
     to{
-        height:80vh;   /* hasta donde baja */
+        opacity:1;
+        transform:translateY(0);
     }
 }
 </style>
 </head>
 <body>
 
-<div class="barra-vertical"></div>
+<div class="barra-vertical">
+    <i class="fa-brands fa-whatsapp icono"></i>
+    <i class="fa-solid fa-envelope icono"></i>
+    <i class="fa-brands fa-instagram icono"></i>
+    <i class="fa-brands fa-tiktok icono"></i>
+</div>
 
 <video autoplay muted loop playsinline>
     <source src="video.mp4" type="video/mp4">
