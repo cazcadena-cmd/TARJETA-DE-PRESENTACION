@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video</title>
+
+<style>
+body{
+    margin:0;
+    background:#000;
+}
+video{
+    width:100vw;
+    height:100vh;
+    object-fit:cover;
+}
+</style>
+</head>
+<body>
+
+<video autoplay muted loop playsinline>
+    <source src="video.mp4" type="video/mp4">
+</video>
+
+<script>
+document.addEventListener("click", () => {
+    const v = document.querySelector("video");
+    v.muted = false;
+}, { once: true });
+</script>
+
+</body>
+</html>
