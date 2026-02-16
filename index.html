@@ -30,8 +30,8 @@ video{
 /* BARRA VERTICAL */
 .barra-vertical{
     position:fixed;
-    top:0;                /* ahora desde el top */
-    left:5px;             /* más a la izquierda */
+    top:0;                
+    left:5px;             
     width:55px;
     background:#FF3131;
     border-radius:0 0 30px 30px;
@@ -53,6 +53,7 @@ video{
     opacity:0;
     transform:translateY(-15px);
     animation:aparecer 0.5s ease forwards;
+    cursor:pointer;
 }
 
 /* RETARDOS */
@@ -79,10 +80,25 @@ video{
 <body>
 
 <div class="barra-vertical">
-    <i class="fa-brands fa-whatsapp icono"></i>
-    <i class="fa-solid fa-envelope icono"></i>
-    <i class="fa-brands fa-instagram icono"></i>
-    <i class="fa-brands fa-tiktok icono"></i>
+    <!-- WHATSAPP -->
+    <a href="https://wa.me/573225443491?text=Hola,%20quiero%20empezar%20mi%20proceso%20de%20entrenamiento%20contigo.%20%C2%BFQu%C3%A9%20planes%20tienes%20disponibles%3F" target="_blank">
+        <i class="fa-brands fa-whatsapp icono"></i>
+    </a>
+
+    <!-- EMAIL -->
+    <a href="mailto:Maryoriortega34@gmail.com?subject=Consulta%20Planes&body=Hola,%20quiero%20empezar%20mi%20proceso%20de%20entrenamiento%20contigo.%20%C2%BFQu%C3%A9%20planes%20tienes%20disponibles%3F">
+        <i class="fa-solid fa-envelope icono"></i>
+    </a>
+
+    <!-- INSTAGRAM -->
+    <a href="https://www.instagram.com/team_maryo_wellness?igsh=MXBzem55cDBydTg5Mg==" target="_blank">
+        <i class="fa-brands fa-instagram icono"></i>
+    </a>
+
+    <!-- TIKTOK -->
+    <a href="https://www.tiktok.com/@personaltrainer187?_r=1&_t=ZS-93yjQo1689a" target="_blank">
+        <i class="fa-brands fa-tiktok icono"></i>
+    </a>
 </div>
 
 <div class="video-container">
